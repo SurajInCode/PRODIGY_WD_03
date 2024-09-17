@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="asserts/logo.ico">
+    <title>Tic Tac Toe by SurajInCode</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <audio id="win">
+        <source src="asserts/win.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="tie">
+        <source src="asserts/tie.mp3" type="audio/mpeg">
+      </audio>
+</head>
+<body>
+    <div class="root">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="playground">
+           <button class="box" id="box1" onclick="box(1)" aria-label="cell 1"></button>
+<button class="box" id="box2" onclick="box(2)" aria-label="cell 2"></button>
+<button class="box" id="box3" onclick="box(3)" aria-label="cell 3"></button>
+<button class="box" id="box4" onclick="box(4)" aria-label="cell 4"></button>
+<button class="box" id="box5" onclick="box(5)" aria-label="cell 5"></button>
+<button class="box" id="box6" onclick="box(6)" aria-label="cell 6"></button>
+<button class="box" id="box7" onclick="box(7)" aria-label="cell 7"></button>
+<button class="box" id="box8" onclick="box(8)" aria-label="cell 8"></button>
+<button class="box" id="box9" onclick="box(9)" aria-label="cell 9"></button>
+        </div>
+
+            <div class="clicks">
+            <button class="buttons" id="start" onclick="undoMove()">
+                <img src="asserts/undo.png" width="45" height="45" alt="Undo">Undo
+            </button>
+            <button class="buttons" id="reset" onclick="resetGame()">
+                <img src="asserts/reset.png" width="45" height="45" alt="Reset">Reset
+            </button>
+            <button class="buttons" id="toggleMute" onclick="toggleMute()">
+                <img src="asserts/mute.png" width="45" height="45" alt="mute">  Mute
+            </button>
+          </div>
+    </div>
+    <h1 id="result">1st Player Turn</h1>
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Rules</button>
+    </div>
+    
+    <div class="popup" id="popup">
+        <h2>Rules:</h2>
+        <ol>
+            <li>The game is played on a 3x3 grid.</li>
+            <li>
+                Players take turns. Player 1 uses "X" and Player 2 uses "O". 
+                Click on an empty square to place your mark.
+            </li>
+            <li>
+                The first player to align three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
+            </li>
+            <li>
+                If all 9 squares are filled and no player has three marks in a row, the game ends in a tie.
+            </li>
+            <li>
+                You can reset the game at any time by clicking the "Reset" button.
+            </li>
+        </ol>
+        <button type="button" id="ok" onclick="closePopup()">OK</button>
+    </div>
+
+    <div class="myinfo">
+        <p class="author">By SurajInCode</p>
+        <div class="social-links-container">
+            <ul class="social-links">
+                <li class="hov">
+                    <a href="https://github.com/SurajInCode">
+                        <img class="link" src="asserts/github.png" alt="kk" />
+                    </a>
+                </li>
+                <li class="hov">
+                    <a href="https://www.linkedin.com/in/suraj5045/">
+                        <img class="link" src="asserts/in.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li class="hov">
+                    <a href="https://www.instagram.com/suraj.h.e/">
+                        <img class="link" src="asserts/insta.png" alt="Instagram" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+</html>
